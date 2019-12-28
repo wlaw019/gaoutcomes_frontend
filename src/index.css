@@ -1,0 +1,60 @@
+body {
+  text-align: center;
+  margin: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav, .summary{
+  display: flex;
+  justify-content: space-around;
+}
+
+table{
+  margin: 10px auto;
+  border-spacing: 0 5px;
+  width: 80%;
+}
+
+.course-row:hover{
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.student-row:hover{
+  background-color: lightgrey;
+}
+
+.student-row-highlight{
+  background-color: pink;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+nav h4:hover {
+  cursor: pointer;
+}
+
+td{
+  border: 1px solid black;
+}
+
+.table-button{
+  width: 5%;
+}
+
+.chart{
+  margin: 10px auto;
+  width: 80%;
+}
