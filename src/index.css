@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: whitesmoke;
+  /* background: whitesmoke; */
   /* font-family: 'Open Sans', calibri; */
 }
 
@@ -15,9 +15,26 @@ code {
     monospace;
 }
 
-nav, .summary{
+nav{
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
+}
+
+.summary{
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+
+nav{
+  background: #92b2ba;
+  background: 		#2E88D4;
+}
+
+nav h3{
+  color: white;
 }
 
 table{
@@ -33,23 +50,26 @@ table{
 
 .student-row:hover{
   background-color: lightgrey;
+  cursor: pointer;
 }
 
 .student-row-highlight{
-  background-color: pink;
+  color: red;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: lightblue;
+  background-color: #f0a8bb;
+  border: 1px solid #f0a8bb;
+  border-radius: 2px;
 }
 
-nav h4:hover {
+nav h3:hover {
   cursor: pointer;
 }
 
 td{
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .table-button{
@@ -75,4 +95,28 @@ header h1{
   color: #92b2ba;
   text-shadow: 2px 2px grey;
   padding-top: 180px;
+}
+
+h3{
+  color: #92b2ba;
+}
+
+tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+fieldset{
+  width: 75%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0 20px;;
+  color: #92b2ba;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  /* background-color: whitesmoke; */
+}
+
+fieldset h4{
+  margin-top: 0;
+
 }

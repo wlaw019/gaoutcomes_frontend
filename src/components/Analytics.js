@@ -18,6 +18,7 @@ class Analytics extends React.Component {
                     {
                         label: "Search Time (Days)",
                         data: this.props.daysArray,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)'
                     }
                 ]
             },

@@ -55,16 +55,16 @@ class Students extends React.Component{
     return(
       <>
         {this.props.students.length!==0?
-          <>
-            <h3>{this.props.students[0].course}: {this.props.students[0].cohort}</h3>
-            <h3>Date Graduated: {new Date(this.props.students[0].dategraduated).toLocaleDateString("en-US")}</h3>
+          <fieldset>
+            <legend><h3>{this.props.students[0].course}: {this.props.students[0].cohort}</h3></legend>
+            <h4>Date Graduated: {new Date(this.props.students[0].dategraduated).toLocaleDateString("en-US")}</h4>
 
             <div className="summary">
-              <h4>Min(Number of Days): {this.state.minDays}</h4>
-              <h4>Avg(Number of Days): {this.state.avgDays}</h4>
-              <h4>Max(Number of Days): {this.state.maxDays}</h4>
+              <h4>Min Search Time (Days): {this.state.minDays}</h4>
+              <h4>Avg Search Time (Days): {this.state.avgDays}</h4>
+              <h4>Max Search Time (Days): {this.state.maxDays}</h4>
             </div>
-          </>
+          </fieldset>
           : null}
 
 
@@ -82,13 +82,13 @@ class Students extends React.Component{
           {
             this.props.students.map((student) => (
 
-              <tr className="student-row"
+              <tr
 
                className = {student.dateoffer===null?
-                 Math.floor((new Date()-new Date(this.props.students[0].dategraduated))/86400000)===this.state.maxDays? "student-row-highlight": null
+                 Math.floor((new Date()-new Date(this.props.students[0].dategraduated))/86400000)===this.state.maxDays? "student-row student-row-highlight": "student-row"
 
 
-                 :Math.floor((new Date(student.dateoffer)-new Date(this.props.students[0].dategraduated))/86400000)===this.state.maxDays? "student-row-highlight": null}
+                 :Math.floor((new Date(student.dateoffer)-new Date(this.props.students[0].dategraduated))/86400000)===this.state.maxDays? "student-row student-row-highlight": "student-row"}
 
                key={student.id}>
 
