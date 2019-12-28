@@ -15,6 +15,10 @@ if (process.env.NODE_ENV === 'development') {
   baseUrl = 'https://gaoutcomes-backend.herokuapp.com'
 }
 
+baseUrl = 'https://gaoutcomes-backend.herokuapp.com'
+
+
+
 
 class App extends React.Component{
   constructor(props){

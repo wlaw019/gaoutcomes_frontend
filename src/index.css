@@ -6,6 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: whitesmoke;
+  /* font-family: 'Open Sans', calibri; */
 }
 
 code {
@@ -60,7 +62,17 @@ td{
 }
 
 header{
- background: url("banner.png");
+ background: url("banner2.png");
  background-repeat: no-repeat;
  background-size: cover;
+ width: 80%;
+ height: 300px;
+ margin: 0 auto;
+}
+
+header h1{
+  font-size: 80px;
+  color: #92b2ba;
+  text-shadow: 2px 2px grey;
+  padding-top: 180px;
 }
