@@ -60,7 +60,7 @@ td{
 }
 
 header{
- background: url("../public/banner.png");
+ background: url("banner.png");
  background-repeat: no-repeat;
  background-size: cover;
 }
