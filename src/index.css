@@ -30,7 +30,7 @@ nav{
 
 nav{
   background: #92b2ba;
-  background: 		#2E88D4;
+  background: #2E88D4;
 }
 
 nav h3{
@@ -55,6 +55,11 @@ table{
 
 .student-row-highlight{
   color: red;
+}
+
+button{
+  border: 1px solid #92b2ba;
+  border-radius: 2px;
 }
 
 button:hover {
@@ -93,7 +98,7 @@ header{
 header h1{
   font-size: 80px;
   color: #92b2ba;
-  text-shadow: 2px 2px grey;
+  text-shadow: 4px 4px grey;
   padding-top: 180px;
 }
 
@@ -119,5 +124,26 @@ fieldset{
 
 fieldset h4{
   margin-top: 0;
+}
 
+form label{
+  margin: 10px;
+}
+
+input[type="submit"], .cancel {
+  width: 5%;
+  height: 25px;
+  background: #92b2ba;
+  border-radius: 5px;
+  box-shadow: 2px 2px grey;
+  margin: 20px;
+}
+
+.cancel{
+  display: inline-block;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #f0a8bb;
 }

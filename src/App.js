@@ -286,7 +286,7 @@ class App extends React.Component{
         <Students students={this.state.students} handleView={this.handleView} handleDelete={this.handleDelete} /> : null}
 
         {this.state.view.page === "addStudent"||this.state.view.page === "editStudent"?
-        <FormStudent handleCreate={this.handleCreate} handleUpdate={this.handleUpdate} view={this.state.view} formInputsStudent={this.state.formInputsStudent} students={this.state.students} />
+        <FormStudent handleCreate={this.handleCreate} handleUpdate={this.handleUpdate} view={this.state.view} formInputsStudent={this.state.formInputsStudent} students={this.state.students} handleStudents={this.handleStudents} />
         : null}
 
 

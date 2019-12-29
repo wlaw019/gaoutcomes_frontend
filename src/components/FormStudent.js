@@ -41,7 +41,7 @@ class FormStudent extends React.Component{
     return(
       <>
         {this.props.students.length!==0? <h3>{this.props.students[0].course}: {this.props.students[0].cohort}</h3>: null}
-        
+
         <div className="form">
           <form onSubmit={this.handleSubmit}>
             <label htmlFor='name'>Name</label>
@@ -50,8 +50,9 @@ class FormStudent extends React.Component{
             <label htmlFor='dateoffer'>Date 1st Offer</label>
             <input type='date' value={this.state.dateoffer} id='dateoffer' onChange={this.handleChange}/>
 
-            <input type='submit' value="Submit"/>
+            {this.state.name? <input type='submit' value="Submit"/>: null}
           </form>
+          <button className="cancel" onClick={() => {this.props.handleStudents(this.state.course_id)}}>Cancel</button>
         </div>
       </>
     )

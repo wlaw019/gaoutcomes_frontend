@@ -56,8 +56,8 @@ class Students extends React.Component{
       <>
         {this.props.students.length!==0?
           <fieldset>
-            <legend><h3>{this.props.students[0].course}: {this.props.students[0].cohort}</h3></legend>
-            <h4>Date Graduated: {new Date(this.props.students[0].dategraduated).toLocaleDateString("en-US")}</h4>
+            <h3>{this.props.students[0].course}: {this.props.students[0].cohort}</h3>
+            <h3>Date Graduated: {new Date(this.props.students[0].dategraduated).toLocaleDateString("en-US")}</h3>
 
             <div className="summary">
               <h4>Min Search Time (Days): {this.state.minDays}</h4>
@@ -116,7 +116,8 @@ class Students extends React.Component{
           </tbody>
         </table>
         <br/>
-        <Analytics daysArray={this.state.daysArray} daysArrayIndex={this.state.daysArrayIndex}/>
+        {this.props.students.length!==0?
+        <Analytics daysArray={this.state.daysArray} daysArrayIndex={this.state.daysArrayIndex}/>: null}
       </>
     )
   }
