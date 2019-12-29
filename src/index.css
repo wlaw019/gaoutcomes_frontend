@@ -29,7 +29,6 @@ nav{
 }
 
 nav{
-  background: #92b2ba;
   background: #2E88D4;
 }
 
@@ -96,10 +95,13 @@ header{
 }
 
 header h1{
-  font-size: 80px;
+  font-size: 30px;
+  padding-top: 160px;
+  /* padding-left: 780px;
   color: #92b2ba;
-  text-shadow: 4px 4px grey;
-  padding-top: 180px;
+  color: #d47a2e; */
+  color: white;
+  text-shadow: 2px 2px grey;
 }
 
 h3{

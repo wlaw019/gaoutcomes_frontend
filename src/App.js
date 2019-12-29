@@ -263,7 +263,7 @@ class App extends React.Component{
     return(
       <div className="container">
         <header>
-          <h1>gaOutcomes</h1>
+          <h1>@gaOutcomes</h1>
 
         </header>
         <nav>
