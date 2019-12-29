@@ -73,7 +73,7 @@ td{
 }
 
 .table-button{
-  width: 5%;
+  width: 6%;
 }
 
 .chart{
@@ -106,14 +106,15 @@ tr:nth-child(even) {
 }
 
 fieldset{
-  width: 75%;
-  margin: 0 auto;
+  box-sizing: border-box;
+  margin: 0px auto;
+  width: 80%;
   text-align: left;
-  padding: 0 20px;;
+  padding: 0 25px;
   color: #92b2ba;
   border: 1px solid #eeeeee;
   border-radius: 5px;
-  /* background-color: whitesmoke; */
+  background-color: #eeeeee;
 }
 
 fieldset h4{

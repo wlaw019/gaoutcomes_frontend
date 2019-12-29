@@ -9,15 +9,13 @@ import FormStudent from './components/FormStudent.js'
 // ========================
 let baseUrl = process.env.REACT_APP_BASEURL;
 
-if (process.env.NODE_ENV === 'development') {
-  baseUrl = 'http://localhost:3000'
-} else {
-  baseUrl = 'https://gaoutcomes-backend.herokuapp.com'
-}
+// if (process.env.NODE_ENV === 'development') {
+//   baseUrl = 'http://localhost:3000'
+// } else {
+//   baseUrl = 'https://gaoutcomes-backend.herokuapp.com'
+// }
 
 baseUrl = 'https://gaoutcomes-backend.herokuapp.com'
-
-
 
 
 class App extends React.Component{
