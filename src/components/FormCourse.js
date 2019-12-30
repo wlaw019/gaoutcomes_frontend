@@ -50,8 +50,8 @@ class FormCourse extends React.Component{
           <label htmlFor='dategraduated'>Date Graduated</label>
           <input type='date' value={this.state.dategraduated} id='dategraduated' onChange={this.handleChange}/>
 
-          {this.state.course?<input type='submit' value="Submit"/>:null}
-          
+          {this.state.course&&this.state.dategraduated?<input type='submit' value="Submit"/>:null}
+
         </form>
       </div>
     )

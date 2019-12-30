@@ -9,13 +9,14 @@ import FormStudent from './components/FormStudent.js'
 // ========================
 let baseUrl = process.env.REACT_APP_BASEURL;
 
-// if (process.env.NODE_ENV === 'development') {
-//   baseUrl = 'http://localhost:3000'
-// } else {
-//   baseUrl = 'https://gaoutcomes-backend.herokuapp.com'
-// }
+if (process.env.NODE_ENV === 'development') {
+  baseUrl = 'http://localhost:3000'
+} else {
+  baseUrl = 'https://gaoutcomes-backend.herokuapp.com'
+}
 
-baseUrl = 'https://gaoutcomes-backend.herokuapp.com'
+// baseUrl = 'https://gaoutcomes-backend.herokuapp.com'
+
 
 
 class App extends React.Component{
@@ -39,6 +40,8 @@ class App extends React.Component{
         name: null,
         course_id: null,
         dateoffer: null,
+        interviews: null,
+        notes: null,
         id: null
       }
     }
@@ -61,6 +64,8 @@ class App extends React.Component{
       name: "",
       course_id: "",
       dateoffer: "",
+      interviews: "",
+      notes: "",
       id: null
     }
 
@@ -86,6 +91,8 @@ class App extends React.Component{
           name: "",
           course_id: data,
           dateoffer: "",
+          interviews: "",
+          notes: "",
           id: ""
         }
 
@@ -94,7 +101,7 @@ class App extends React.Component{
         })
         break
       case "addStudent":
-        pageTitle = "Aa a new Student"
+        pageTitle = "Add a new Student"
         // formInputsStudent = {
         //   name: data.name,
         //   course_id: data.course_id,
@@ -107,7 +114,10 @@ class App extends React.Component{
         formInputsStudent = {
           name: data.name,
           course_id: data.course_id,
-          dateoffer: data.dateoffer===null? new Date().toISOString().split('T')[0] :new Date(data.dateoffer).toISOString().split('T')[0],
+          // dateoffer: data.dateoffer===null? new Date().toISOString().split('T')[0] :new Date(data.dateoffer).toISOString().split('T')[0],
+          dateoffer: data.dateoffer===null? null :new Date(data.dateoffer).toISOString().split('T')[0],
+          interviews: data.interviews,
+          notes: data.notes,
           id: data.id
           }
 

@@ -7,13 +7,22 @@ class FormStudent extends React.Component{
       name: "",
       course_id: "",
       dateoffer: "",
+      interviews: "",
+      notes: "",
       id: null
     }
   }
 
 
   handleChange = (event) => {
-    this.setState({[event.target.id]: event.target.value})
+
+    // if (event.target.id==='interviews') {
+    //   this.setState({[event.target.id]: parseInt(event.target.value)});
+    // } else {
+    //   this.setState({[event.target.id]: event.target.value});
+    // }
+
+    this.setState({[event.target.id]: event.target.value});
   }
 
 
@@ -32,6 +41,8 @@ class FormStudent extends React.Component{
       name: this.props.formInputsStudent.name,
       course_id: this.props.formInputsStudent.course_id,
       dateoffer: this.props.formInputsStudent.dateoffer,
+      interviews: this.props.formInputsStudent.interviews,
+      notes: this.props.formInputsStudent.notes,
       id: this.props.formInputsStudent.id
     })
   }
@@ -49,6 +60,12 @@ class FormStudent extends React.Component{
 
             <label htmlFor='dateoffer'>Date 1st Offer</label>
             <input type='date' value={this.state.dateoffer} id='dateoffer' onChange={this.handleChange}/>
+
+            <label htmlFor='interviews'>Number of Interviews</label>
+            <input type='number' value={this.state.interviews} id='interviews' onChange={this.handleChange}/>
+
+            <label htmlFor='notes'>Notes</label>
+            <textarea rows="4" cols="50" value={this.state.notes} id='notes' onChange={this.handleChange}></textarea>
 
             {this.state.name? <input type='submit' value="Submit"/>: null}
           </form>

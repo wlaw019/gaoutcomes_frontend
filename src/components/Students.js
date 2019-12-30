@@ -75,6 +75,7 @@ class Students extends React.Component{
               <th>Name</th>
               <th>Date 1st Offer</th>
               <th>Search Time (Days)</th>
+              <th>Number of Interviews</th>
               <th colSpan="2">Actions</th>
             </tr>
           </thead>
@@ -101,6 +102,7 @@ class Students extends React.Component{
                 <td>{Math.floor((new Date()-new Date(this.props.students[0].dategraduated))/86400000)}</td>
                 : <td>{Math.floor((new Date(student.dateoffer)-new Date(this.props.students[0].dategraduated))/86400000)}</td>}
 
+                <td>{student.interviews}</td>
 
                 <td className="table-button"><button onClick={() => {this.props.handleView("editStudent", student)}}>&#9998;</button></td>
                 <td className="table-button"><button onClick={() => {this.props.handleDelete(student.id, setTimeout(() => this.getDays(), 500))
