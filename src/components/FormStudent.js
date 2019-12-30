@@ -55,17 +55,17 @@ class FormStudent extends React.Component{
 
         <div className="form">
           <form onSubmit={this.handleSubmit}>
-            <label htmlFor='name'>Name</label>
-            <input type='text' value={this.state.name} id='name' onChange={this.handleChange}/>
+            <label htmlFor='name'>Name</label><br/>
+            <input type='text' value={this.state.name} id='name' onChange={this.handleChange}/><br/>
 
-            <label htmlFor='dateoffer'>Date 1st Offer</label>
-            <input type='date' value={this.state.dateoffer} id='dateoffer' onChange={this.handleChange}/>
+            <label htmlFor='dateoffer'>Date 1st Offer</label><br/>
+            <input type='date' value={this.state.dateoffer} id='dateoffer' onChange={this.handleChange}/><br/>
 
-            <label htmlFor='interviews'>Number of Interviews</label>
-            <input type='number' value={this.state.interviews} id='interviews' onChange={this.handleChange}/>
+            <label htmlFor='interviews'>Number of Interviews</label><br/>
+            <input type='number' value={this.state.interviews} id='interviews' onChange={this.handleChange}/><br/>
 
-            <label htmlFor='notes'>Notes</label>
-            <textarea rows="4" cols="50" value={this.state.notes} id='notes' onChange={this.handleChange}></textarea>
+            <label htmlFor='notes'>Notes</label><br/>
+            <textarea value={this.state.notes} id='notes' onChange={this.handleChange}></textarea><br/>
 
             {this.state.name? <input type='submit' value="Submit"/>: null}
           </form>

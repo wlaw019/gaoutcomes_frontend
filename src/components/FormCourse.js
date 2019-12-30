@@ -41,14 +41,14 @@ class FormCourse extends React.Component{
     return(
       <div className="form">
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor='course'>Course</label>
-          <input type='text' value={this.state.course} id='course' onChange={this.handleChange}/>
+          <label htmlFor='course'>Course</label><br/>
+          <input type='text' value={this.state.course} id='course' onChange={this.handleChange}/><br/>
 
-          <label htmlFor='cohort'>Cohort</label>
-          <input type='text' value={this.state.cohort} id='cohort' onChange={this.handleChange}/>
+          <label htmlFor='cohort'>Cohort</label><br/>
+          <input type='text' value={this.state.cohort} id='cohort' onChange={this.handleChange}/><br/>
 
-          <label htmlFor='dategraduated'>Date Graduated</label>
-          <input type='date' value={this.state.dategraduated} id='dategraduated' onChange={this.handleChange}/>
+          <label htmlFor='dategraduated'>Date Graduated</label><br/>
+          <input type='date' value={this.state.dategraduated} id='dategraduated' onChange={this.handleChange}/><br/>
 
           {this.state.course&&this.state.dategraduated?<input type='submit' value="Submit"/>:null}
 

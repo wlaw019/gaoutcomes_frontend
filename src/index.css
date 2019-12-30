@@ -133,19 +133,43 @@ form label{
 }
 
 input[type="submit"], .cancel {
-  width: 5%;
-  height: 25px;
+  width: 25%;
+  height: 40px;
   background: #92b2ba;
   border-radius: 5px;
   box-shadow: 2px 2px grey;
-  margin: 20px;
+  margin: 10px;
 }
 
 .cancel{
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 input[type="submit"]:hover {
   cursor: pointer;
   background-color: #f0a8bb;
 }
+
+.form{
+  width: 40%;
+  text-align: left;
+  margin: 10px auto;
+}
+
+input, textarea{
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #92b2ba;
+}
+
+textarea{
+  width: 100%;
+}
+
+
+
+/* textarea{
+  width: 55%;
+  height: 150px;
+} */
