@@ -62,7 +62,7 @@ class FormStudent extends React.Component{
             <input type='date' value={this.state.dateoffer} id='dateoffer' onChange={this.handleChange}/><br/>
 
             <label htmlFor='interviews'>Number of Interviews</label><br/>
-            <input type='number' value={this.state.interviews} id='interviews' onChange={this.handleChange}/><br/>
+            <input type='number' min="0" value={this.state.interviews} id='interviews' onChange={this.handleChange}/><br/>
 
             <label htmlFor='notes'>Notes</label><br/>
             <textarea value={this.state.notes} id='notes' onChange={this.handleChange}></textarea><br/>

@@ -10,7 +10,8 @@ class Students extends React.Component{
       maxDays: "",
       avgDays: "",
       daysArray: "",
-      daysArrayIndex: ""
+      daysArrayIndex: "",
+      interviewsArray: ""
     }
   }
 
@@ -22,6 +23,7 @@ class Students extends React.Component{
       let days = "";
       let daysArray = [];
       let daysArrayIndex = [];
+      let interviewsArray = [];
 
       for (var i = 0; i < this.props.students.length; i++) {
 
@@ -33,6 +35,7 @@ class Students extends React.Component{
 
         daysArray.push(days);
         daysArrayIndex.push(this.props.students[i].name);
+        interviewsArray.push(this.props.students[i].interviews);
       }
 
       this.setState({
@@ -40,7 +43,8 @@ class Students extends React.Component{
         maxDays: Math.max(...daysArray),
         avgDays: Math.round(daysArray.reduce((a, b) => a + b)/daysArray.length),
         daysArray: daysArray,
-        daysArrayIndex: daysArrayIndex
+        daysArrayIndex: daysArrayIndex,
+        interviewsArray:interviewsArray
       }, console.log(this.state), setTimeout(() => console.log(this.state), 500))
     }
   }
@@ -119,7 +123,7 @@ class Students extends React.Component{
         </table>
         <br/>
         {this.props.students.length!==0?
-        <Analytics daysArray={this.state.daysArray} daysArrayIndex={this.state.daysArrayIndex}/>: null}
+        <Analytics daysArray={this.state.daysArray} daysArrayIndex={this.state.daysArrayIndex} interviewsArray={this.state.interviewsArray}/>: null}
       </>
     )
   }

@@ -14,19 +14,22 @@ class Analytics extends React.Component {
             data: {
                 //Bring in data
                 labels: this.props.daysArrayIndex,
-                datasets: [
-                    {
+                datasets: [{
                         label: "Search Time (Days)",
                         data: this.props.daysArray,
                         backgroundColor: 'rgba(54, 162, 235, 0.2)'
-                    }
-                ]
+                      },{
+                      label: 'Number of Interviews',
+                      data: this.props.interviewsArray,
+                      type: 'line',
+                      backgroundColor: 'rgba(240, 168, 187, 0.8)'
+                    }]
             },
             options: {
-              legend:{display:false},
+              legend:{display:true},
               scales: {
                 yAxes: [{
-                  scaleLabel: {display: true, labelString: 'Search Time (Days)'},
+                  scaleLabel: {display: true, labelString: 'Search Time (Days)/ Number of Interviews'},
                   ticks: {beginAtZero: true}
                 }],
                 xAxes: [{
