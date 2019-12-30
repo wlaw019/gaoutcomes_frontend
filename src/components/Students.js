@@ -85,7 +85,7 @@ class Students extends React.Component{
           </thead>
           <tbody>
           {
-            this.props.students.map((student) => (
+            this.props.students.map((student, index) => (
 
               <tr
 
@@ -110,13 +110,9 @@ class Students extends React.Component{
 
                 <td className="table-button"><button onClick={() => {this.props.handleView("editStudent", student)}}>&#9998;</button></td>
                 <td className="table-button"><button onClick={() => {this.props.handleDelete(student.id, setTimeout(() => this.getDays(), 500))
-
-
-
-
-
                 }}>&#128465;</button></td>
               </tr>
+
             ))
         }
           </tbody>
