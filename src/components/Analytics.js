@@ -16,10 +16,12 @@ class Analytics extends React.Component {
                 labels: this.props.daysArrayIndex,
                 datasets: [{
                         label: "Search Time (Days)",
+                        yAxisID: "Search Time (Days)",
                         data: this.props.daysArray,
                         backgroundColor: 'rgba(54, 162, 235, 0.2)'
                       },{
                       label: 'Number of Interviews',
+                      yAxisID: 'Number of Interviews',
                       data: this.props.interviewsArray,
                       type: 'line',
                       backgroundColor: 'rgba(240, 168, 187, 0.8)'
@@ -29,8 +31,15 @@ class Analytics extends React.Component {
               legend:{display:true},
               scales: {
                 yAxes: [{
-                  scaleLabel: {display: true, labelString: 'Search Time (Days)/ Number of Interviews'},
-                  ticks: {beginAtZero: true}
+                  id: "Search Time (Days)",
+                  scaleLabel: {display: true, labelString: 'Search Time (Days)'},
+                  ticks: {beginAtZero: true, maxTicksLimit:5},
+                  position: 'left'
+                }, {
+                  id: 'Number of Interviews',
+                  scaleLabel: {display: true, labelString: 'Number of Interviews'},
+                  ticks: {beginAtZero: true, maxTicksLimit:5},
+                  position: 'right'
                 }],
                 xAxes: [{
                   scaleLabel: {display: true, labelString: 'Student'}
