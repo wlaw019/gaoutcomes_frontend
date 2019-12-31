@@ -30,7 +30,7 @@ class Courses extends React.Component{
 
                 <td className="table-button"><button onClick={(event) => {this.props.handleView("editCourse", course); event.stopPropagation();}}>&#9998;</button></td>
 
-                <td className="table-button"><button onClick={(event) => {this.props.handleDelete(course.id); event.stopPropagation();}}>&#128465;</button></td>
+                <td className="table-button"><button onClick={(event) => {this.props.handleDelete(course.id); this.props.handleDeleteStudents(course.id); event.stopPropagation();}}>&#128465;</button></td>
               </tr>
             ))
 

@@ -223,6 +223,22 @@ class App extends React.Component{
   }
 
 
+  handleDeleteStudents = (id) => {
+
+    fetch(`${baseUrl}/students/course/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    }).then(json => {
+
+      console.log("Deleted corresponding students");
+
+      }).catch(err => console.log(err))
+  }
+
+
   handleStudents = (course_id) => {
     this.handleAllStudents();
 
@@ -286,7 +302,7 @@ class App extends React.Component{
 
         <h3>{this.state.view.pageTitle}</h3>
         {this.state.view.page === "home"?
-        <Courses handleView={this.handleView} handleDelete={this.handleDelete} courses={this.state.courses} handleStudents={this.handleStudents} allStudents={this.state.allStudents} /> : null}
+        <Courses handleView={this.handleView} handleDelete={this.handleDelete} handleDeleteStudents={this.handleDeleteStudents} courses={this.state.courses} handleStudents={this.handleStudents} allStudents={this.state.allStudents} /> : null}
 
         {this.state.view.page === "addCourse"||this.state.view.page === "editCourse"?
         <FormCourse handleCreate={this.handleCreate} handleUpdate={this.handleUpdate} view={this.state.view} formInputs={this.state.formInputs} />
