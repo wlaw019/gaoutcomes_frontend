@@ -60,4 +60,4 @@ class Analytics extends React.Component {
     }
 }
 
-export default Analytics
+export default Analytics;
