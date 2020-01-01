@@ -5,7 +5,10 @@ class Notes extends React.Component {
 
   render(){
     return(
-      <textarea readOnly value={this.props.student.notes}
+      <fieldset className="student-notes">
+        <legend><h3>Notes: {this.props.modalName}</h3></legend>
+        <p>{this.props.modalNotes}</p>
+      </fieldset>
     )
   }
 }
