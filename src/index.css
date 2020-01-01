@@ -168,21 +168,23 @@ textarea{
   height: 100px;
 }
 
-.students-notes{
-  width: 95%;
+.student-notes{
+    border: 1px solid #92b2ba;
+    padding: 20px;
+    margin: 10px auto;
+    background-color: white;
+    width: 80%;
+    height: 300px;
 }
 
-/* table tr, table tr td:nth-last-child(1) {
-    display: block !important;
-    clear: both;
+p{
+    white-space: pre-wrap;
+    color: black;
+    line-height: 30px;
+    position: relative;
+    top:-20px;
 }
-table tr, table tr td {
-    clear: both;
-} */
 
-
-
-/* textarea{
-  width: 55%;
-  height: 150px;
-} */
+legend h3{
+  margin: 0;
+}

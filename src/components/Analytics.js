@@ -4,9 +4,9 @@ import Chart from "chart.js";
 
 class Analytics extends React.Component {
 
-    chartRef = React.createRef();
+        chartRef = React.createRef();
+        componentDidMount() {
 
-    componentDidUpdate() {
         const myChartRef = this.chartRef.current.getContext("2d");
 
         new Chart(myChartRef, {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Analytics from './Analytics.js'
+import Notes from './Notes.js'
 
 
 class Students extends React.Component{
@@ -11,13 +12,27 @@ class Students extends React.Component{
       avgDays: "",
       daysArray: "",
       daysArrayIndex: "",
-      interviewsArray: ""
+      interviewsArray: "",
+      isShow: "",
+      modalName: "",
+      modalNotes: ""
     }
   }
 
 // ========================
 // getDays function to calculate the summary
 // ========================
+  isShow = (data) => {
+
+    this.setState({
+      isShow: !this.state.isShow,
+      modalName: data.name,
+      modalNotes: data.notes
+    })
+    setTimeout(() => console.log(this.state.isShow), 500)
+  }
+
+
   getDays = () => {
     if (this.props.students.length!== 0) {
       let days = "";
@@ -51,6 +66,7 @@ class Students extends React.Component{
 
   componentDidMount(){
     this.getDays();
+    setTimeout(() => this.setState({isShow: false}), 500)
   }
 
 
@@ -85,9 +101,9 @@ class Students extends React.Component{
           </thead>
           <tbody>
           {
-            this.props.students.map((student, index) => (
+            this.props.students.map((student) => (
 
-              <tr
+              <tr onClick={() => {this.isShow(student)}}
 
                className = {student.dateoffer===null?
                  Math.floor((new Date()-new Date(this.props.students[0].dategraduated))/86400000)===this.state.maxDays? "student-row student-row-highlight": "student-row"
@@ -108,8 +124,9 @@ class Students extends React.Component{
 
                 <td>{student.interviews}</td>
 
-                <td className="table-button"><button onClick={() => {this.props.handleView("editStudent", student)}}>&#9998;</button></td>
-                <td className="table-button"><button onClick={() => {this.props.handleDelete(student.id, setTimeout(() => this.getDays(), 500))
+                <td className="table-button"><button onClick={(event) => {this.props.handleView("editStudent", student); event.stopPropagation();}}>&#9998;</button></td>
+                <td className="table-button"><button onClick={(event) => {this.props.handleDelete(student.id, setTimeout(() => this.getDays(), 500)); event.stopPropagation(); this.setState({isShow: ""});
+                setTimeout(() => this.setState({isShow: false}), 500)
                 }}>&#128465;</button></td>
               </tr>
 
@@ -118,8 +135,16 @@ class Students extends React.Component{
           </tbody>
         </table>
         <br/>
-        {this.props.students.length!==0?
-        <Analytics daysArray={this.state.daysArray} daysArrayIndex={this.state.daysArrayIndex} interviewsArray={this.state.interviewsArray}/>: null}
+        {this.state.isShow? <Notes modalName={this.state.modalName} modalNotes={this.state.modalNotes} />: null}
+
+
+
+        {this.props.students.length!==0 && this.state.isShow===false &&
+        <Analytics daysArray={this.state.daysArray} daysArrayIndex={this.state.daysArrayIndex} interviewsArray={this.state.interviewsArray}/>}
+
+
+
+
       </>
     )
   }
