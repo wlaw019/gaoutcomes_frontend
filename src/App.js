@@ -15,9 +15,6 @@ if (process.env.NODE_ENV === 'development') {
   baseUrl = 'https://gaoutcomes-backend.herokuapp.com'
 }
 
-// baseUrl = 'https://gaoutcomes-backend.herokuapp.com'
-
-
 
 class App extends React.Component{
   constructor(props){
@@ -102,19 +99,12 @@ class App extends React.Component{
         break
       case "addStudent":
         pageTitle = "Add a new Student"
-        // formInputsStudent = {
-        //   name: data.name,
-        //   course_id: data.course_id,
-        //   dateoffer: new Date(data.dateoffer).toISOString().split('T')[0],
-        //   id: data.id
-        // }
         break
       case "editStudent":
         pageTitle = "Edit Student"
         formInputsStudent = {
           name: data.name,
           course_id: data.course_id,
-          // dateoffer: data.dateoffer===null? new Date().toISOString().split('T')[0] :new Date(data.dateoffer).toISOString().split('T')[0],
           dateoffer: data.dateoffer===null? null :new Date(data.dateoffer).toISOString().split('T')[0],
           interviews: data.interviews,
           notes: data.notes,
@@ -288,10 +278,12 @@ class App extends React.Component{
   render(){
     return(
       <div className="container">
+
         <header>
           <h1>@gaOutcomes</h1>
 
         </header>
+
         <nav>
           <h3 onClick={() => {this.handleView("home")}}>Home</h3>
           {this.state.view.page === "home"||this.state.view.page === "addCourse"?
@@ -301,6 +293,7 @@ class App extends React.Component{
         </nav>
 
         <h3>{this.state.view.pageTitle}</h3>
+
         {this.state.view.page === "home"?
         <Courses handleView={this.handleView} handleDelete={this.handleDelete} handleDeleteStudents={this.handleDeleteStudents} courses={this.state.courses} handleStudents={this.handleStudents} allStudents={this.state.allStudents} /> : null}
 
@@ -315,12 +308,9 @@ class App extends React.Component{
         <FormStudent handleCreate={this.handleCreate} handleUpdate={this.handleUpdate} view={this.state.view} formInputsStudent={this.state.formInputsStudent} students={this.state.students} handleStudents={this.handleStudents} />
         : null}
 
-
       </div>
     )
   }
-
-
 
 
 }

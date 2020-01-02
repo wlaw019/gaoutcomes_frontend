@@ -70,7 +70,6 @@ class Students extends React.Component{
   }
 
 
-
   render(){
     return(
       <>
@@ -86,8 +85,6 @@ class Students extends React.Component{
             </div>
           </fieldset>
           : null}
-
-
 
         <table>
           <thead>
@@ -141,10 +138,6 @@ class Students extends React.Component{
 
         {this.props.students.length!==0 && this.state.isShow===false &&
         <Analytics daysArray={this.state.daysArray} daysArrayIndex={this.state.daysArrayIndex} interviewsArray={this.state.interviewsArray}/>}
-
-
-
-
       </>
     )
   }

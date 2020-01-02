@@ -15,13 +15,6 @@ class FormStudent extends React.Component{
 
 
   handleChange = (event) => {
-
-    // if (event.target.id==='interviews') {
-    //   this.setState({[event.target.id]: parseInt(event.target.value)});
-    // } else {
-    //   this.setState({[event.target.id]: event.target.value});
-    // }
-
     this.setState({[event.target.id]: event.target.value});
   }
 

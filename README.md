@@ -1,3 +1,6 @@
+General Assembly Final project with React frontend and node-postgres backend.
+For complete README, refer to https://github.com/wlaw019/gaoutcomes-backend
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
