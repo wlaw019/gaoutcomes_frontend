@@ -123,7 +123,7 @@ class Students extends React.Component{
 
                 <td className="table-button"><button onClick={(event) => {this.props.handleView("editStudent", student); event.stopPropagation();}}>&#9998;</button></td>
                 <td className="table-button"><button onClick={(event) => {this.props.handleDelete(student.id, setTimeout(() => this.getDays(), 500)); event.stopPropagation(); this.setState({isShow: ""});
-                setTimeout(() => this.setState({isShow: false}), 500)
+                setTimeout(() => this.setState({isShow: false}), 800)
                 }}>&#128465;</button></td>
               </tr>
 

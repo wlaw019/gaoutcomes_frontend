@@ -281,7 +281,6 @@ class App extends React.Component{
 
         <header>
           <h1>@gaOutcomes</h1>
-
         </header>
 
         <nav>
